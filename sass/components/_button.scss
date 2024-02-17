@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -9,19 +10,23 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+    border: none;
+    cursor: pointer;
   }
   &:hover {
     transform: translateY(-3px);
-    box-shadow: $box-shadow-md;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
     }
   }
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
-    box-shadow: $box-shadow-md;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
   &::after {
     content: "";
@@ -72,11 +77,11 @@
   &:hover {
     background-color: $color-primary;
     color: $color-white;
-    box-shadow: $box-shadow-sm;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transform: translateY(-2px);
   }
   &:active {
-    box-shadow: $box-shadow-sm;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transform: translateY(0);
   }
 }
