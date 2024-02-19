@@ -41,12 +41,9 @@
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
   &__list {
+    @include absCenter;
     width: 100%;
     list-style: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
   }
   &__item {
